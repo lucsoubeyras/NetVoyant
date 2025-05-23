@@ -1,0 +1,13 @@
+{
+    "Apple": "Telefon/Tablet",
+    "Samsung": "Telefon/Tablet",
+    "BSH": "Beyaz Eşya",
+    "Bosch": "Beyaz Eşya",
+    "TP-LINK": "Modem/Router",
+    "Canon": "Yazıcı",
+    "Intel": "Bilgisayar Bileşeni",
+    "Amazon": "IoT Cihazı",
+    "Realtek": "Ethernet Bileşeni",
+    "Huawei":"Modem / Network Device"
+  }
+  
