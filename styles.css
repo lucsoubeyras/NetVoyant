@@ -1,134 +1,151 @@
-/* styles.css - Geliştirilmiş Profesyonel Tasarım */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --card-color: #f5f5f5;
+    --accent-color: #2196f3;
+    --border-color: #cccccc;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f111a;
+    --text-color: #e0e0e0;
+    --card-color: #1c1f2b;
+    --accent-color: #00bcd4;
+    --border-color: #333333;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f111a;
-    color: #e0e0e0;
-    padding: 30px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0;
     margin: 0;
 }
 
-h1 {
-    color: #00bcd4;
-    font-size: 2.8em;
-    text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.input-group {
+.theme-toggle button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: var(--accent-color);
+}
+
+.panel {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.controls {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
-.input-label-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.input-label-group label {
-    margin-bottom: 5px;
-    font-size: 0.95em;
-    color: #90caf9;
-}
-
-.input-group input {
-    flex: 1 1 200px;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #333;
-    background-color: #1c1f2b;
-    color: #e0e0e0;
+.controls input {
+    padding: 12px;
     font-size: 1em;
-    box-shadow: inset 0 0 5px #000;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    flex: 1 1 200px;
 }
 
 button {
-    padding: 15px 25px;
-    border-radius: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
     border: none;
     font-size: 1em;
-    background: linear-gradient(135deg, #00bcd4, #2196f3);
-    color: #fff;
+    background-color: var(--accent-color);
+    color: white;
     cursor: pointer;
     transition: 0.3s;
-    margin: 10px;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+    background-color: #1976d2;
 }
 
 .status {
     text-align: center;
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #90caf9;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: var(--accent-color);
 }
 
 .progress-container {
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #1c1f2b;
-    border-radius: 10px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 20px;
+    margin-top: 10px;
 }
 
 .progress-bar {
-    height: 20px;
-    background: linear-gradient(90deg, #00bcd4, #2196f3);
-    transition: width 0.3s ease-in-out;
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
 }
 
 #results {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
 }
 
 .device-item {
-    background: #1e212f;
-    margin: 10px auto;
-    padding: 12px 18px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 4px 0;
     font-size: 0.9em;
-    line-height: 1.4;
-    color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    transition: background-color 0.2s ease;
 }
 
-.device-item strong {
-    font-size: 1.1em;
-    color: #4dd0e1;
+.device-item:hover {
+    background-color: rgba(0, 188, 212, 0.08);
 }
+
+.device-item span {
+    white-space: nowrap;
+    font-size: 0.9em;
+    color: var(--text-color);
+    flex: 1 1 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .green-check {
-    font-size: 2.5em;
-    color: #4caf50;
     text-align: center;
+    font-size: 2em;
+    color: green;
     margin-top: 20px;
-    display: none;
-}
-
-.error-message {
-    background: #ff5252;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 10px;
-    display: none;
 }

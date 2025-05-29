@@ -5,6 +5,7 @@ import { startScan } from './scanner.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import os from 'os';
+import { runSpeedTest } from './speedtest.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -44,6 +45,10 @@ app.whenReady().then(() => {
             }
         }
         return { startIP: '', endIP: '' };
+    });
+
+    ipcMain.handle('run-speed-test', async () => {
+        return await runSpeedTest();
     });
 
     ipcMain.on('toggle-pause-scan', (event, state) => {

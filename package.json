@@ -12,6 +12,7 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "csv-parse": "^5.6.0",
+    "fast-speedtest-api": "^0.3.2",
     "macaddress": "^0.5.3",
     "node-fetch": "^3.3.2",
     "ping": "^0.4.4"

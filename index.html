@@ -1,33 +1,38 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
 <head>
+    <meta charset="UTF-8">
     <title>NetVoyant - Profesyonel IP Tarayıcı</title>
     <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
 </head>
 <body>
-    <h1>🔍 NetVoyant IP Tarayıcı</h1>
-    
-    <div class="input-group">
-        <input type="text" id="start-ip" placeholder="Başlangıç IP (örn. 192.168.1.1)">
-        <input type="text" id="end-ip" placeholder="Bitiş IP (örn. 192.168.1.254)">
-        <input type="text" id="port" placeholder="Port (Varsayılan: 80)">
+    <div class="header">
+        <h1>🔍 NetVoyant</h1>
+        <div class="theme-toggle">
+            <button id="toggle-theme">🌓</button>
+        </div>
     </div>
-    
-    <button id="start-scan">🚀 Tarama Başlat</button>
-    <div id="error" class="error-message"></div>
 
-    <button id="pause-scan" style="display: none;">🛑 Taramayı Durdur</button>
-    
-    <div id="status" class="status">Tarama bekleniyor...</div>
-    <div class="progress-container">
-        <div id="progress-bar" class="progress-bar"></div>
+    <div id="internet-speed" class="status"></div>
+
+    <div class="panel">
+        <div class="controls">
+            <input type="text" id="start-ip" placeholder="Başlangıç IP">
+            <input type="text" id="end-ip" placeholder="Bitiş IP">
+            <input type="text" id="port" placeholder="Port (Varsayılan: 80)">
+            <button id="start-scan">🚀 Tarama Başlat</button>
+            <button id="pause-scan" style="display: none;">🛑 Taramayı Durdur</button>
+        </div>
+
+        <div id="status" class="status">Tarama bekleniyor...</div>
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <ul id="results"></ul>
+        <div class="green-check" id="checkmark">✔️</div>
     </div>
-    
-    <ul id="results"></ul>
-    <div class="green-check" id="checkmark">✔️</div>
 
-    <script src="src/renderer.js"></script>
+    <script src="src/renderer.js" type="module"></script>
 </body>
 </html>
