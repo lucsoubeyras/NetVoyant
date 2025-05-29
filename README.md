@@ -20,22 +20,6 @@ Electron + Node.js ile geliştirilmiştir ve teknik olmayan kullanıcılar için
 
 ---
 
-## Proje Yapısı
-
-NetVoyant/
-├── src/
-│   ├── main.js         # Electron başlangıç dosyası
-│   ├── renderer.js     # UI mantığı
-│   ├── scanner.js      # Ağ tarama modülü
-│   ├── speedtest.js    # İndirme hızı testi modülü
-├── assets/             # Stil dosyaları, görseller
-├── oui.csv             # MAC adresi üretici verisi
-├── index.html          # Arayüz HTML yapısı
-├── package.json        # Proje konfigürasyonu
-└── README.md
-
----
-
 ## 🛠️ Kurulum
 
 ### 1. Reponun Kopyalanması ve Kurulum
