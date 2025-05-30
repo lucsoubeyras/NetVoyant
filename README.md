@@ -1,28 +1,39 @@
 # ⚡ NetVoyant
 
-**NetVoyant**, ağınızdaki cihazları gerçek zamanlı olarak tarayan, IP adresi, MAC adresi, üretici bilgisi ve cihaz türü gibi kritik verileri görselleştiren modern bir ağ keşif aracıdır.  
-Electron + Node.js ile geliştirilmiştir ve teknik olmayan kullanıcılar için sade bir arayüz sunar.
+**NetVoyant** is a modern network scanner that detects all devices on your local network in real-time. It provides key information such as IP address, MAC address, manufacturer, device type, response time, and web interface status.
 
-![Platform](https://img.shields.io/badge/platform-electron%20%7C%20nodejs-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
+Built using **Electron + Node.js**, it offers a clean, user-friendly interface even for non-technical users.
 
----
-
-## 🚀 Özellikler
-
-- 🔍 Gerçek zamanlı IP aralığı tarama
-- 🧠 MAC adresinden üretici bilgisi çözümleme (IEEE OUI veritabanı ile)
-- 💡 Üreticiye göre cihaz türü tahmini
-- 📶 Cloudflare üzerinden basit hız testi
-- 🧭 Ping yanıt süresi ölçümü
-- 💻 Electron tabanlı kullanıcı dostu arayüz
+<p>
+  <img src="https://img.shields.io/badge/platform-desktop-blue" />
+  <img src="https://img.shields.io/badge/electron-^28.x-brightgreen" />
+  <img src="https://img.shields.io/badge/nodejs-^20.x-green" />
+  <img src="https://img.shields.io/badge/license-MIT-yellow" />
+  <img src="https://img.shields.io/badge/status-active-success" />
+</p>
 
 ---
 
-## 🛠️ Kurulum
+## 🚀 Features
 
-### 1. Reponun Kopyalanması ve Kurulum
+- 🔍 Real-time IP range scanning
+- 🌐 MAC vendor resolution (local IEEE OUI database)
+- 🧠 Device type inference based on vendor and ports
+- 📊 Visual statistics panel with charts
+- 🗺️ Live network topology map (router-centered)
+- ⚡ Internet speed test via Cloudflare
+- ⏱️ Device response time tracking
+- ☁️ Wi-Fi / Ethernet connection type detection
+- 🌙 Dark & light mode support
+- 📁 Export results to CSV
+- ⚙️ Electron-based fast desktop UI
+
+---
+
+## 🛠️ Installation
+
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/lucsoubeyras/NetVoyant.git
 cd NetVoyant
