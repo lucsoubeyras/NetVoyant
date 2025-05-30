@@ -1,0 +1,81 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.controls input {
+  padding: 6px 10px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  color: var(--text-color);
+  flex: 1 1 160px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+.status {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: var(--accent-color);
+}
+
+.progress-container {
+  width: 100%;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+}
+
+#results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.device-item {
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  background-color: var(--card-color);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.device-item span {
+  min-width: 100px;
+  flex: 1 1 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.85em;
+}

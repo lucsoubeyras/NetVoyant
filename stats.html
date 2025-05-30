@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>NetVoyant - İstatistikler</title>
+
+  <!-- Ana tema sistemine dahil ol -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/theme.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/network-info.css">
+  <link rel="stylesheet" href="stats.css"> <!-- stats.css en sonda kalsın -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>📊 Tarama İstatistikleri</h1>
+    <button onclick="window.close()">❌ Kapat</button>
+  </div>
+
+  <div class="panel">
+    <canvas id="summaryChart" height="240"></canvas>
+    <div id="summaryList"></div>
+  </div>
+
+  <script type="module" src="src/stats.js"></script>
+</body>
+</html>

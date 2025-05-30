@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>NetVoyant - Profesyonel IP Tarayıcı</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/network-info.css">
+    <link rel="stylesheet" href="styles/modal.css">
+
 </head>
-<body>
-    <div class="header">
+<body style="overflow-x:hidden;margin:0;padding:0;">
+
+    <div id="titlebar" style="overflow-x:hidden;max-width:100%;box-sizing:border-box;">
+        <div class="title">NetVoyant</div>
+        <div class="window-controls">
+            <button id="min-btn">—</button>
+            <button id="max-btn">🗖</button>
+            <button id="close-btn">✕</button>
+        </div>
+    </div>
+
+    <div class="header" style="overflow-x:hidden;max-width:100%;box-sizing:border-box;">
         <h1>🔍 NetVoyant</h1>
         <div class="theme-toggle">
             <button id="toggle-theme">🌓</button>
         </div>
     </div>
 
-    <div id="internet-speed" class="status"></div>
+    <div id="internet-speed" class="status" style="overflow-x:hidden;max-width:100%;box-sizing:border-box;"></div>
+    <div id="network-info" class="network-info-box" style="overflow-x:hidden;max-width:100%;box-sizing:border-box;"></div>
 
-    <div class="panel">
+<div class="panel">
+    <div class="panel-header">
         <div class="controls">
             <input type="text" id="start-ip" placeholder="Başlangıç IP">
             <input type="text" id="end-ip" placeholder="Bitiş IP">
             <input type="text" id="port" placeholder="Port (Varsayılan: 80)">
             <button id="start-scan">🚀 Tarama Başlat</button>
             <button id="pause-scan" style="display: none;">🛑 Taramayı Durdur</button>
+            <button id="stats-btn" style="display: none;">📊 Sonuç İstatistikleri</button>
+            <button id="export-btn" style="display: none;">📥 Dışa Aktar</button>
+            <button id="topology-btn" style="display: none;">🗺️ Topolojiyi Gör</button>
         </div>
 
         <div id="status" class="status">Tarama bekleniyor...</div>
         <div class="progress-container">
             <div id="progress-bar" class="progress-bar"></div>
         </div>
+    </div>
 
+    <div class="panel-results">
         <ul id="results"></ul>
         <div class="green-check" id="checkmark">✔️</div>
     </div>
+</div>
+
 
     <script src="src/renderer.js" type="module"></script>
 </body>

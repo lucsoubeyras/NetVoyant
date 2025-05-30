@@ -1,0 +1,52 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-color: #f5f5f5;
+  --accent-color: #2196f3;
+  --border-color: #cccccc;
+}
+
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+html.fade-transition {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+button, input, .card, .panel, .device-item, .network-info-box {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Tüm tarayıcılar için modern scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  border: 2px solid var(--card-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color-hover, #00a0b0);
+}

@@ -1,0 +1,25 @@
+.network-info-box {
+  background-color: var(--card-color, #1e1e1e);
+  color: var(--text-color, #f0f0f0);
+  padding: 20px 30px;
+  border: 1px solid var(--border-color, #444);
+  border-radius: 10px;
+  margin: 20px 30px;
+  max-width: 1000px;
+  font-size: 13px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.network-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--accent-color, #00bcd4);
+  margin-bottom: 10px;
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 20px;
+}

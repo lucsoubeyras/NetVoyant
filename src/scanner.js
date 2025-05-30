@@ -5,7 +5,8 @@ import os from 'os';
 import { generateIPs } from './utils.js';
 import { getVendorFromMac, loadMacVendors } from './macLookup.js';
 import { getDeviceType } from './deviceClassifier.js';
-
+import { checkWebPorts } from './webChecker.js';
+import { getConnectionType } from './connectionType.js';
 
 loadMacVendors();
 
@@ -33,12 +34,22 @@ async function scanIP(ip, port) {
             const mac = await getMacAddress(ip);
             const manufacturer = getVendorFromMac(mac);
             const deviceType = getDeviceType(manufacturer);
+            const webPorts = await checkWebPorts(ip);
+
+            // Akıllı bağlantı türü tespiti: hem üretici hem MAC üzerinden
+            const connectionType = getConnectionType(manufacturer, mac);
+
             return {
                 ip,
                 responseTime: isAlive.time,
                 mac,
                 manufacturer,
-                deviceType
+                deviceType,
+                connectionType,
+                web: {
+                    http: webPorts.http,
+                    https: webPorts.https
+                }
             };
         }
     } catch (err) {
